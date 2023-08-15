@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player v1</title>
+    <link rel="icon" type="image/png" href="./img/favIcon.png">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    <!-- SimpleBar  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.2.5/dist/simplebar.css"/>
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rangeStyle.css">
+    <link rel="stylesheet" href="css/scrollBar_simplebar.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo"><i class="fa-solid fa-music"></i>Music Player</a>
+            <div class="bar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="musicBar">
+        <div class="musicListWrapper" data-simplebar data-simplebar-auto-hide="false">
+            <h3>Music List</h3>
+            <ul id="musicList">
+                <!-- <li musicindx="0"><span></span>Music One</li> -->
+            </ul>
+        </div>
+    </div>
+    <div id="musicPortion">
+        <div class="container">
+            <div class="musicBox">
+                <span class="musicAnimMiddle musicAnimMiddle1"></span>
+                <span class="musicAnimMiddle musicAnimMiddle2"></span>
+                <audio src="audios/সবপন যব বড়.mp3" controls></audio>
+                <div class="musicDetails">
+                    <h3 class="musicName">Song Name</h3>
+                    <h4 class="musicianName">Singer Name</h4>
+                </div>
+                <div class="previewWrapper">
+                    <img id="preview" src="img/preview1.jpg" alt="">
+                </div>
+                <div class="control">
+                    <div class="row">
+                        <div class="timeLine">
+                            <input id="timeLineRange" type="range" name="timeLine" min="0" max="100" step="any" value="0">
+                        </div>
+                        <div class="soundLine">
+                            <i class="fa-solid fa-volume-high volumeBtn"></i>
+                            <!-- <i class="fa-solid fa-volume-xmark"></i> -->
+                            <div class="soundRange">
+                                <input id="soundLineRange" type="range" name="volume" min="0" max="1" step="any">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-backward-step"></i>
+                        <i class="fa-solid fa-backward"></i>
+                        <i class="fa-solid fa-play play playBtn"></i>
+                        <!-- <i class="fa-solid fa-pause"></i> -->
+                        <i class="fa-solid fa-forward"></i>
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="row controlBtns">
+                        <button class="ctrlBtn" id="randomBtn">Random</button>
+                        <button class="ctrlBtn active" id="repeatBtn">Repeat</button>
+                        <button class="ctrlBtn" id="serialBtn">Serial</button>
+                    </div>
+                    <div class="row time">
+                        <h5 class="audioTime passedTime">00:00:00</h5>
+                        <h5 class="audioTime remainTime">00:00:00</h5>
+                        <h5 class="audioTime durationTime">00:00:00</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="keyBoardSortCut">
+        <i class="fa-solid fa-keyboard icon"></i>
+        <ul class="keysList">
+            <li>SoundUp
+                <code>
+                    <i class="fa-solid fa-arrow-up"></i>
+                </code>
+            </li>
+            <li>SoundDown
+                <code>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </code>
+            </li>
+            <li>Forward
+                <code>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </code>
+            </li>
+            <li>Backward
+                <code>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </code>
+            </li>
+            <li>Mute/Unmute<code>Ctrl + m</code></li>
+            <li>Play/Pause<code>Space</code></li>
+            <li>Next Music
+                <code>
+                    Ctrl + <i class="fa-solid fa-arrow-right"></i>
+                </code>
+            </li>
+            <li>Previous Music
+                <code>
+                    Ctrl + <i class="fa-solid fa-arrow-left"></i>
+                </code>
+            </li>
+            <li>Sidebar<code>Ctrl + b</code></li>
+            <li>keyboard ShortCut<code>Ctrl + k</code></li>
+            <li>Volume Quick Skip<code>0 - 9</code></li>
+            <li>Music Quick Skip<code>Ctrl + (0 - 9)</code></li>
+        </ul>
+    </div>
+    
+    <!-- SimpleBar Src -->
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@6.2.5/dist/simplebar.min.js"></script>
+    <!-- Custom  JS -->
+    <script src="js/app.js" type="module"></script>
+    
+    <script>
+        new SimpleBar(document.getElementById('.musicListWrapper'));
+    </script>
+</body>
+</html>

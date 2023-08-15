@@ -1,0 +1,19 @@
+:root{
+    --backgroundColor: #FAF8F1;
+    --themeColor: #1A120B;
+    --lightColor: #AD8B73;
+    --fontFamily: 'Nunito', sans-serif;
+    --timeCurrentWidth: 0%;
+    --soundCurrentWidth: 0%;
+    --rangeTrackHeight: 0.5rem;
+    --rangeTrackWidth: 1rem;
+}
+/* Style the track */
+.simplebar-track {
+    border-radius: 30rem;
+    background-color: var(--themeColor);
+}
+/* Style the thumb */
+.simplebar-scrollbar::before {
+    background-color: var(--lightColor);
+}

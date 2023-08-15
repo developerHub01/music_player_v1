@@ -1,0 +1,48 @@
+:root{
+    --backgroundColor: #FAF8F1;
+    --themeColor: #1A120B;
+    --lightColor: #AD8B73;
+    --fontFamily: 'Nunito', sans-serif;
+    --timeCurrentWidth: 0%;
+    --soundCurrentWidth: 0%;
+    --rangeTrackHeight: 0.5rem;
+    --rangeTrackWidth: 1rem;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--backgroundColor);
+}
+  
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+    background: var(--backgroundColor);
+}
+input[type="range"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    border-radius: 5rem;
+    outline: none;
+    background: var(--backgroundColor);
+    height: var(--rangeTrackHeight);
+    overflow: hidden;
+    border: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    height: var(--rangeTrackHeight);
+    width: var(--rangeTrackHeight);
+    border-radius: 50%;
+}
+input[type="range"]::-moz-range-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    height: var(--rangeTrackHeight);
+    width: var(--rangeTrackHeight);
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
