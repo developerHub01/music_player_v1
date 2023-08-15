@@ -2,7 +2,7 @@
 
 # Live Preview: 
 
-[Live preview](https://shakildevhub.github.io/music_player_v1/ "Live Preview App"): https://shakildevhub.github.io/music_player_v1/
+[Live preview](https://developerHub01.github.io/music_player_v1/ "Live Preview App"): https://developerHub01.io/music_player_v1/
 ----------------------------------------------------
 
 # First Look: 
